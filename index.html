@@ -1,1 +1,45 @@
-Daniel Turner
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+        font-family: 'Lato', sans-serif;
+        background-color: var(--secondary-color);
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+      }
+
+      ol, ul {
+        list-style: none;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+    <title>Daniel Turner Portfolio</title>
+    <meta name="description" content="Portfolio">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="/src/portfolio-view/portfolio-view.html">
+  </head>
+  <body><portfolio-view></portfolio-view></body>
+</html>

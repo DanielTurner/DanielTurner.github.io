@@ -1,0 +1,320 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+
+<dom-module id="portfolio-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+        margin: 0;
+        padding: 0;
+        --primary-color: #303f9f;
+        --primary-color-light: #666ad1;
+        --primary-color-dark: #001970;
+        --secondary-color: #1a237e;
+        --secondary-color-light: #534bae;
+        --secondary-color-dark: #000051;
+        --text-color-light: #FFFFFF;
+        --text-color-dark: #37474f;
+      }
+
+      #Header {
+        display: block;
+        border: 0;
+        margin: 0;
+        padding: 20px;
+        background: linear-gradient(75deg, var(--primary-color), var(--primary-color-dark));
+        color: var(--text-color-light);
+      }
+
+      paper-tabs {
+        --paper-tabs-selection-bar-color: var(--primary-color-light);
+        --paper-tabs: {
+          background-color: var(--primary-color-dark);
+          color: var(--text-color-light);
+        };
+      }
+
+      paper-tab {
+        --paper-tab-ink: var(--primary-color-light);
+        --paper-tab-content: {
+          color: var(--text-color-light);
+          font-weight: bolder;
+        };
+        --paper-tab-content-unselected: {
+          color: var(--text-color-light);
+          font-weight: normal;
+        };
+      }
+
+      paper-card {
+        --paper-card: {
+          position: relative;
+          width: 100%;
+          min-height: 60vh;
+          margin: 0;
+          padding: 20px;
+        }
+      }
+
+      img {
+        right: 20px;
+        top: 40px;
+        position: absolute
+      }
+
+      #StickyFooter {
+        font-size: 8px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 12px;
+        width: 100%;
+      }
+
+    </style>
+    <div id="Header">
+        <h1>Daniel Turner</h1>
+        <h2>Software Engineer</h2>
+    </div>
+
+    <paper-tabs selected="{{tab}}" scrollable>
+      <paper-tab>Audit Portal</paper-tab>
+      <paper-tab>myCtars</paper-tab>
+      <paper-tab>AgentQ MyStats</paper-tab>
+      <paper-tab>Think Money App</paper-tab>
+      <paper-tab>HR Insights</paper-tab>
+      <paper-tab>NDIS App</paper-tab>
+      <paper-tab>Anonymous Chat</paper-tab>
+      <paper-tab>Map Resource</paper-tab>
+      <paper-tab>Sport Allocations</paper-tab>
+      <paper-tab>FTP Application</paper-tab>
+      <paper-tab>Baggage Ticket Designer</paper-tab>
+    </paper-tabs>
+
+    <iron-pages selected="{{tab}}">
+      <paper-card class="audit-portal">
+        <h3>Audit Portal</h3>
+        <img src="./images/audit-portal.gif">
+        <span class="details">The Audit Portal application was designed to allow easy auditing of on-site hardware.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Progressive Web Application</li>
+          <li>Cross Platform</li>
+          <li>Web Components</li>
+          <li>Custom Elements (v1)</li>
+          <li>Service Worker</li>
+          <li>Local Storage</li>
+          <li>Offline Mode</li>
+          <li>Push Notifications Ready</li>
+          <li>Add to homescreen</li>
+          <li>HTML Templates</li>
+          <li>Shadow Dom</li>
+          <li>ES6 Classes</li>
+          <li>Native ES6 Javascript</li>
+          <li>Native ES6 Javascript</li>
+          <li>Consumes a REST API</li>
+          <li>Leverages Polymer 2 Library</li>
+          <li>Leverages Redux Library</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>myCtars</h3>
+        <img src="./images/myctars.gif">
+        <span class="details">The myCtars app was designed to allow simple NDIS information to be retrived by the user</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Progressive Web Application</li>
+          <li>Cross Platform</li>
+          <li>Web Components</li>
+          <li>Custom Elements (v1)</li>
+          <li>Service Worker</li>
+          <li>Local Storage</li>
+          <li>Offline Mode</li>
+          <li>Push Notifications Ready</li>
+          <li>Add to homescreen</li>
+          <li>HTML Templates</li>
+          <li>Shadow Dom</li>
+          <li>Native Javascript</li>
+          <li>Consumes a REST API</li>
+          <li>Leverages Polymer 1 Library</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>AgentQ MyStats</h3>
+        <img src="./images/mystats.gif">
+        <span class="details">A prototype to show the use of Electron with a PWA.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Progressive Web Application</li>
+          <li>Cross Platform</li>
+          <li>Web Components</li>
+          <li>Custom Elements (v1)</li>
+          <li>Service Worker</li>
+          <li>Local Storage</li>
+          <li>Offline Mode</li>
+          <li>Push Notifications Ready</li>
+          <li>Add to homescreen</li>
+          <li>HTML Templates</li>
+          <li>Shadow Dom</li>
+          <li>Native Javascript</li>
+          <li>Consumes a REST API</li>
+          <li>Leverages Polymer 1 Library</li>
+          <li>Leverages Electron</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>Think Budget App</h3>
+        <span class="details">A budget application focused on highlighting spending to enable the financial professionals to help their customers better</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+            <li>Progressive Web Application</li>
+            <li>Cross Platform</li>
+            <li>Web Components</li>
+            <li>Custom Elements (v1)</li>
+            <li>Service Worker</li>
+            <li>Local Storage</li>
+            <li>Offline Mode</li>
+            <li>Add to homescreen</li>
+            <li>HTML Templates</li>
+            <li>Shadow Dom</li>
+            <li>Native Javascript</li>
+            <li>Live Data</li>
+            <li>Leverages Firebase</li>
+            <li>Leverages Polymer 2 Library</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>HR Insights</h3>
+        <span class="details">A small human resource application to allow easy analysis of teams.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+            <li>Progressive Web Application</li>
+            <li>Cross Platform</li>
+            <li>Web Components</li>
+            <li>Custom Elements (v1)</li>
+            <li>Service Worker</li>
+            <li>Local Storage</li>
+            <li>Offline Mode</li>
+            <li>Add to homescreen</li>
+            <li>HTML Templates</li>
+            <li>Shadow Dom</li>
+            <li>Native Javascript</li>
+            <li>Live Data</li>
+            <li>Leverages Firebase</li>
+            <li>Leverages Polymer 1 Library</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>NDIS Care Application</h3>
+        <span class="details">A medium sized NDIS application focused on providing budgeting, reporting and scheduling in the NDIS space.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+            <li>Progressive Web Application</li>
+            <li>Cross Platform</li>
+            <li>Web Components</li>
+            <li>Custom Elements (v1)</li>
+            <li>Service Worker</li>
+            <li>Local Storage</li>
+            <li>Offline Mode</li>
+            <li>Add to homescreen</li>
+            <li>HTML Templates</li>
+            <li>Shadow Dom</li>
+            <li>Native Javascript</li>
+            <li>Live Data</li>
+            <li>Leverages Firebase</li>
+            <li>Leverages Polymer 1 Library</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>Anonymous Chat</h3>
+        <span class="details">An anonymous chat program allowing users security through anoniminity in hostile environments.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+            <li>Progressive Web Application</li>
+            <li>Cross Platform</li>
+            <li>Web Components</li>
+            <li>Custom Elements (v0)</li>
+            <li>HTML Templates</li>
+            <li>Shadow Dom</li>
+            <li>Native Javascript</li>
+            <li>Leverages Polymer 1 Library</li>
+            <li>Consumes a REST API</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>Map Resource</h3>
+        <span class="details">Reporting software for mining focused on estimated resource levels.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Web Application</li>
+          <li>Cross Platform</li>
+          <li>Server Side Rendering</li>
+          <li>PERL</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>Sport Allocations</h3>
+        <span class="details">Desktop software for allocating sports to children based on preferences.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Visual Basic</li>
+          <li>Windows Environment only</li>
+          <li>Desktop Application</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>FTP Application</h3>
+        <span class="details">Simple FTP application</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Visual Basic</li>
+          <li>Windows Environment only</li>
+          <li>Desktop Application</li>
+        </ul>
+      </paper-card>
+      <paper-card>
+        <h3>Baggage Ticket Designer</h3>
+        <span class="details">Graphical User Interface for creating custom baggage tickets to be used for a large commercial airliner.</span>
+        <h4>Features &amp; Technology</h4>
+        <ul>
+          <li>Java</li>
+          <li>Cross Platform</li>
+          <li>Desktop Application</li>
+          <li>Communicated directly to commercial digital printers</li>
+        </ul>
+      </paper-card>
+    </iron-pages>
+
+    <div id="StickyFooter">
+        All product names, trademarks and registered trademarks are property of their respective owners.
+        Use of these names,trademarks and brands does not imply endorsement.
+    </div>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class PortfolioView extends Polymer.Element {
+      static get is()
+      {
+        return 'portfolio-view';
+      }
+
+      static get properties() {
+        return {
+          tab: {
+            type: Number,
+            value: 0,
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PortfolioView.is, PortfolioView);
+  </script>
+</dom-module>
